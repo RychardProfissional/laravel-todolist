@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.todolist.container {
+    padding: 20px;
+    background-color: blanchedalmond;
+    border-radius: 10px;
+}
+
+.todolist.title {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.todolist.content {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.todolist.column {
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 45em;
+    width: 35em;
+    background-color: #dddddd;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.todolist.column_header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 15px;
+    background-color: #999999;
+}
+
+.todolist.column_title {
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.todolist.column_amount {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    font-family: monospace;
+    border-radius: 2px;
+    background-color: #dddddd;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.todolist.column_content {
+    flex-grow: 1;
+    padding: 15px 10px;
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.todolist.column_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 5px;
+    background-color: #999999;
+}
+
+.todolist.column_item_operations {
+    display: flex;
+    opacity: 0;
+    gap: 10px;
+    align-items: center;
+    margin-right: -10px;
+    transition-duration: .5s;
+}
+
+.todolist.column_item:hover > .todolist.column_item_operations {
+    opacity: 100;
+    margin-right: 0;
+}
+
+.todolist.btn {
+    transition-duration: .3s;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+.todolist.btn.add_item {
+    background-color: #999999;
+    margin-top: 20px;
+    padding: 10px;
+    position: absolute;
+    bottom: 0px;
+    min-width: 100%;
+}
+
+.todolist.btn.del_item{
+    background-color: #E74C3Cbb;
+    font-weight: bold;
+    padding: 5px 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.todolist.btn.edit_item{
+    background-color: #3498DBbb;
+    font-weight: bold;
+    padding: 5px 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.todolist.btn.del_item:hover {
+    background-color: #E74C3C;
+}
+
+.todolist.btn.edit_item:hover {
+    background-color: #3498DB;
+}
+
+.todolist.btn.add_item:hover {
+    font-size: 1.1em;
+}
+
